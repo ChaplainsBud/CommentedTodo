@@ -22,6 +22,18 @@ public class Todo {
     @Size(min=10)
     private String description;
 
+    public Todo(@NotNull @Size(min = 4) String name, @NotNull @Size(min = 10) String description) {
+        this.name = name;
+        this.description = description;
+    }
+
+    public Todo(long id) {
+        this.id = id;
+    }
+
+    public Todo() {
+    }
+
     public long getId() {
         return id;
     }
